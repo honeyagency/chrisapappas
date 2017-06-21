@@ -1,1 +1,16 @@
-nav {}
+nav {
+    ul {
+        margin: 0;
+        list-style-type: none;
+
+        li {
+            margin: 0;
+            display: inline-block;
+            border-right: 1px solid $gray;
+
+            &:last-of-type {
+                border: 0;
+            }
+        }
+    }
+}

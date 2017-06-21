@@ -83,6 +83,9 @@ function getSinglePost($posttype = null)
         'image'      => $attachedimage,
         'link'       => get_permalink(),
     );
+    if ($posttype == 'post') {
+        $singlePostArray['custom'] = prepareBlogPostFields();
+    }
 
     // Restores original Post Data
     wp_reset_postdata();

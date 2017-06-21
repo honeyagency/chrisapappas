@@ -4,7 +4,7 @@ $default-font: 				-apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-ser
 
 $base-serif-font: 			$default-font;
 $base-sans-font:			"sofia-pro", sans-serif;
-$heading-font-family:		"eloquent-jf-pro", serif;
+$heading-font-family:		"ltc-bodoni-175",serif;
 $body-font: 				$base-sans-font;
 $heading-font-weight: 		400;
 
@@ -53,3 +53,5 @@ $screen-md-max:              ($screen-md - 1) !default;
 $max-xs:  new-breakpoint(max-width $screen-xs-max 12);
 $max-sm: new-breakpoint(max-width $screen-sm-max 12);
 $max-md:  new-breakpoint(max-width $screen-md-max  6);
+
+$mobile-spacing: 16px;

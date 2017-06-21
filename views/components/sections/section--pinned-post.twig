@@ -1,0 +1,17 @@
+{% set break = false %}
+{% for post in posts if break == false %}
+	{% if post.custom.details.pinned_post == 1 and post.custom.details.pinned_post_expiration < "now"|date(Ymd) %}
+		<section class="section--pinned-post bg--black flex flex--wrap justify--center align--items-center max-wrap margin--center">
+			<div class="grid--one grid--sm-half nog spacing--gutter spacing--vert-1">
+				<h2 class="color--white text--uppercase">{{post.title}}</h2>
+				{% if post.custom.event != null %}
+					<time class="color--white text--uppercase letter--1">{{post.custom.event.start_date|date('F d, Y')}}  |  Event</time>
+				{% endif %}
+			</div>
+			<div class="grid--one grid--sm-half nog">
+		 	<img class="block" src="{{post.custom.details.pinned_post_image|resize(1260, 860)}}" alt="{{post.title}}" />
+		</div>
+		</section>
+		{% set break = true %}
+	{% endif %}
+{% endfor %}

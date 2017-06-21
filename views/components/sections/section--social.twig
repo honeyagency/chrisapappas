@@ -1,0 +1,15 @@
+<div class="section--social text--right">
+	<i class="icon-social--search" data-grunticon-embed></i>
+	{% if options.social.instagram != null %}
+		<a href="https://instagram.com/{{options.social.instagram}}" target="_blank" title="Follow {{options.social.instagram}} on instagram"><i class="icon-social--instagram" data-grunticon-embed></i></a>
+	{% endif %}
+	{% if options.social.twitter != null %}
+		<a href="https://twitter.com/{{options.social.twitter}}" target="_blank" title="Follow {{options.social.twitter}} on twitter"><i class="icon-social--twitter" data-grunticon-embed></i></a>
+	{% endif %}
+	{% if options.social.facebook != null %}
+		<a href="{{options.social.facebook}}" target="_blank" title="Follow {{site.title}} on facebook"><i class="icon-social--facebook" data-grunticon-embed></i></a>
+	{% endif %}
+	{% if options.social.pinterest != null %}
+		<a href="{{options.social.pinterest}}" target="_blank" title="Follow {{site.title}} on pinterest"><i class="icon-social--pinterest" data-grunticon-embed></i></a>
+	{% endif %}
+</div>
