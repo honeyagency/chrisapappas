@@ -21,9 +21,34 @@
  * @since    Timber 0.1
  */
 
-$context          = Timber::get_context();
-$post             = new TimberPost();
-$context['post']  = $post;
-$context['posts'] = getCustomPosts('post', 10, null, 'date', null, null);
+$context         = Timber::get_context();
+$post            = new TimberPost();
+$context['post'] = $post;
+
+$pinpost = getCustomPosts('post', -1, null, 'date', null, null);
+
+$pinnedPost;
+$pinPostId;
+
+foreach ($pinpost as $post) {
+
+	// If there is a pinned post that isn't expired, we'll add it to a context
+    
+    if ($post['custom']['details']['pinned_post'] == 'true' and $post['custom']['details']['pinned_post_expiration'] > strtotime("now")) {
+        $pinnedPost = $post;
+        $pinPostId  = $post['id'];
+        break;
+    }
+
+    // if there's nothing, we'll make the most recent post take its place (even if the most recent post is 'pinned' an has an expired pin date)
+
+    if ($pinnedPost == null) {
+        $pinnedPost = $pinpost['0'];
+        $pinPostId  = $pinnedPost['id'];
+    }
+}
+$context['pinnedPost'] = $pinnedPost;
+
+$context['posts'] = getCustomPosts('post', 10, null, 'date', $pinPostId, null);
 
 Timber::render(array('page-' . $post->post_name . '.twig', 'page.twig'), $context);

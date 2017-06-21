@@ -1,0 +1,9 @@
+<section class="section--latest-posts max-wrap margin--center spacing--gutter content-box flex flex--wrap justify--between align--baseline ">
+	<h3 class="font--sans text--uppercase text--center color--black bordered grid--one margin--vert-3">Latest Posts</h3>
+	{% for post in posts %}
+		{% if post.id != pinpost and loop.index < 6 %}
+			{% include 'components/blocks/block--post.twig' %}
+		{% endif %}
+	{% endfor %}
+			{% include 'components/blocks/block--about-link.twig' %}
+</section>

@@ -34,8 +34,8 @@
 }
 
 .grid--half {
-    flex-basis: calc(100% / 2 - .5em);
-    width: calc(100% / 2 - .5em);
+    flex-basis: calc(100% / 2 - 1em);
+    width: calc(100% / 2 - 1em);
 
     &.nog {
         flex-basis: calc(100% / 2);
@@ -44,8 +44,8 @@
 }
 
 .grid--third {
-    flex-basis: calc(100% / 3 - .6666666em);
-    width: calc(100% / 3 - .6666666em);
+    flex-basis: calc(100% / 3 - 22px);
+    width: calc(100% / 3 - 22px);
 
     &.nog {
         flex-basis: calc(100% / 3);
@@ -110,8 +110,8 @@
     }
 
     .grid--xs-half {
-        flex-basis: calc(100% / 2 - .5em);
-        width: calc(100% / 2 - .5em);
+        flex-basis: calc(100% / 2 - 1em);
+        width: calc(100% / 2 - 1em);
 
         &.nog {
             flex-basis: calc(100% / 2);
@@ -120,8 +120,8 @@
     }
 
     .grid--xs-third {
-        flex-basis: calc(100% / 3 - .6666666em);
-        width: calc(100% / 3 - .6666666em);
+        flex-basis: calc(100% / 3 - 22px);
+        width: calc(100% / 3 - 22px);
 
         &.nog {
             flex-basis: calc(100% / 3);
@@ -188,8 +188,8 @@
     }
 
     .grid--sm-half {
-        flex-basis: calc(100% / 2 - .5em);
-        width: calc(100% / 2 - .5em);
+        flex-basis: calc(100% / 2 - 1em);
+        width: calc(100% / 2 - 1em);
 
         &.nog {
             flex-basis: calc(100% / 2);
@@ -208,8 +208,8 @@
     }
 
     .grid--sm-third {
-        flex-basis: calc(100% / 3 - .6666666em);
-        width: calc(100% / 3 - .6666666em);
+        flex-basis: calc(100% / 3 - 22px);
+        width: calc(100% / 3 - 22px);
 
         &.nog {
             flex-basis: calc(100% / 3);
@@ -276,8 +276,8 @@
     }
 
     .grid--md-half {
-        flex-basis: calc(100% / 2 - .5em);
-        width: calc(100% / 2 - .5em);
+        flex-basis: calc(100% / 2 - 1em);
+        width: calc(100% / 2 - 1em);
 
         &.nog {
             flex-basis: calc(100% / 2);
@@ -286,8 +286,8 @@
     }
 
     .grid--md-third {
-        flex-basis: calc(100% / 3 - .6666666em);
-        width: calc(100% / 3 - .6666666em);
+        flex-basis: calc(100% / 3 - 22px);
+        width: calc(100% / 3 - 22px);
 
         &.nog {
             flex-basis: calc(100% / 3);
@@ -354,8 +354,8 @@
     }
 
     .grid--lg-half {
-        flex-basis: calc(100% / 2 - .5em);
-        width: calc(100% / 2 - .5em);
+        flex-basis: calc(100% / 2 - 1em);
+        width: calc(100% / 2 - 1em);
 
         &.nog {
             flex-basis: calc(100% / 2);
@@ -364,8 +364,8 @@
     }
 
     .grid--lg-third {
-        flex-basis: calc(100% / 3 - .6666666em);
-        width: calc(100% / 3 - .6666666em);
+        flex-basis: calc(100% / 3 - 22px);
+        width: calc(100% / 3 - 22px);
 
         &.nog {
             flex-basis: calc(100% / 3);

@@ -2,8 +2,16 @@
     font-weight: 100 !important;
 }
 
-.font--bold {
+.font--light {
+    font-weight: 300 !important;
+}
+
+.font--semi-bold {
     font-weight: 600 !important;
+}
+
+.font--bold {
+    font-weight: 700 !important;
 }
 
 .font--black {
@@ -20,6 +28,10 @@
 
 .font--larger {
     font-size: 1.1em;
+}
+
+.font--even-larger {
+    font-size: 1.3em;
 }
 
 .font--smaller {
@@ -66,6 +78,9 @@
     }
 }
 
+.line--short {
+    line-height: 1.2;
+}
 .line--2 {
     line-height: 2;
 }

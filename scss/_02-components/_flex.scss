@@ -47,3 +47,17 @@
 .block {
     display: block;
 }
+
+.inline-block {
+    display: inline-block;
+}
+
+.content-box {
+    box-sizing: content-box;
+}
+
+.vertical--center {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}

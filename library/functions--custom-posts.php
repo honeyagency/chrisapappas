@@ -78,6 +78,7 @@ function getSinglePost($posttype = null)
         'id'         => get_the_id(),
         'title'      => get_the_title(),
         'categories' => $categories,
+        'excerpt'    => get_the_excerpt(),
         'tags'       => get_the_tags(),
         'post_type'  => $posttype,
         'image'      => $attachedimage,

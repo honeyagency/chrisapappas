@@ -86,7 +86,7 @@
             "key": "field_59499fc15468d",
             "label": "Pinned Post?",
             "name": "pinned_post",
-            "type": "true_false",
+            "type": "radio",
             "instructions": "This pins the post to the top of the homepage and any page displaying posts. The most recent non-expired post will display.",
             "required": 0,
             "conditional_logic": 0,
@@ -95,17 +95,22 @@
                 "class": "",
                 "id": ""
             },
-            "message": "",
-            "default_value": 0,
-            "ui": 0,
-            "ui_on_text": "",
-            "ui_off_text": ""
+            "choices": {
+                "true": "True",
+                "false": "False"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "false",
+            "layout": "vertical",
+            "return_format": "value"
         },
         {
             "key": "field_59499fd15468e",
             "label": "Pinned Post Expiration",
             "name": "pinned_post_expiration",
-            "type": "date_picker",
+            "type": "date_time_picker",
             "instructions": "The date that the post will stop being \"pinned\"",
             "required": 0,
             "conditional_logic": 0,
@@ -114,8 +119,8 @@
                 "class": "",
                 "id": ""
             },
-            "display_format": "F j, Y",
-            "return_format": "Ymd",
+            "display_format": "F j, Y g:i a",
+            "return_format": "U",
             "first_day": 1
         },
         {
@@ -253,5 +258,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1498004579
+    "modified": 1498067499
 }
