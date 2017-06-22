@@ -3,7 +3,17 @@
     height: 50vw;
     position: relative;
 
+    @include media($screen-xs) {
+        height: 33.333vw;
+    }
+
+
     @include media($screen-sm) {
+        height: 25vw;
+    }
+
+
+    @include media($screen-md) {
         height: 20vw;
     }
 
@@ -28,5 +38,44 @@
         left: 0;
         right: 0;
         bottom: 0;
+    }
+
+    &:nth-of-type(10), &:nth-of-type(11) {
+        @include media($max-xs) {
+            display: none;
+        }
+
+
+        @include media($screen-md) {
+            display: none;
+        }
+    }
+}
+
+.block--instagram-link {
+    height: 50vw;
+    position: relative;
+
+    @include media($screen-xs) {
+        height: 33.333vw;
+    }
+
+
+    @include media($screen-sm) {
+        height: 25vw;
+    }
+
+
+    @include media($screen-md) {
+        height: 20vw;
+    }
+
+
+    a {
+        span {
+            @include media($max-sm) {
+                font-size: .8em !important;
+            }
+        }
     }
 }

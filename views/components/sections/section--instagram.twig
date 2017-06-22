@@ -1,24 +1,24 @@
 <section class="section--instagram flex flex--wrap">
 	{% for image in instagram %}
-		{# {% if loop.index < 10 %} #}
+		{% if loop.index < 12 %}
 			
 			{% set ratio = (image.images.standard_resolution.width / image.images.standard_resolution.height) %}
  			{% if ratio < 1 %}{% set class = 'tall' %}{% elseif ratio > 1 %}{% set class = 'wide' %}{% else %}{% set class = 'square' %}{% endif %}
 			
-			<div class="block--instagram-image grid--fifth nog">
+			<div class="block--instagram-image grid--half grid--xs-third grid--sm-fourth grid--md-fifth nog">
 				<a title="View this image on Instagram" target="_blank" href="{{image.link}}">
 					<img alt="{{image.caption.text}}" src="{{image.images.standard_resolution.url}}" class="{{class}}" width="100%">
 				</a>
 			</div>
 			{% if loop.first %}
-				<div class="grid--fifth nog bg--black color--white text--center" style="height:20vw;">
+				<div class="block--instagram-link grid--half grid--xs-third grid--sm-fourth grid--md-fifth nog bg--black color--white text--center">
 					<a href="https://instagram.com/{{image.user.username}}" class="vertical--center block">
 						<i class="icon-social--instagram color--white margin--center" data-grunticon-embed></i>
-						<span class="text--uppercase font--larger letter--1 color--white">@{{image.user.username}}</span>
+						<span class="text--uppercase  letter--1 color--white">@{{image.user.username}}</span>
 					</a>
 				</div>
 			{% endif %}
-		{# {% endif %} #}
+		{% endif %}
 	{% endfor %}
 </section>
 
