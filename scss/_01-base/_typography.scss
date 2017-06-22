@@ -52,6 +52,7 @@ h3 {
 
 h4 {
     font-size: $h4;
+    letter-spacing: 1px;
 }
 
 h5 {
@@ -183,4 +184,8 @@ code, pre {
 
 p {
     margin-bottom: 1em;
+}
+hr{
+    border:0;
+    border-bottom: 1px solid $gray;
 }

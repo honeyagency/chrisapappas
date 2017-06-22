@@ -80,5 +80,8 @@ if (function_exists('acf_add_options_page')) {
     acf_add_options_page();
 }
 
+// load a list of recent images from instagram
+require_once 'instagram.php';
+
 require_once 'functions--custom-fields.php';
 require_once 'functions--custom-posts.php';

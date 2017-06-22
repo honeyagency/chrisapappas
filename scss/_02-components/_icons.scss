@@ -37,3 +37,30 @@
         height: 100%;
     }
 }
+
+.icon-arrow-right {
+    &.text {
+        height: 8px;
+        display: inline-block;
+        position: relative;
+        top: -1px;
+
+        svg {
+            height: 100%;
+        }
+    }
+}
+
+.icon-social--instagram {
+    width: 50px;
+    display: block;
+
+    &.color--white {
+        svg {
+            height: 100%;
+            path {
+                fill: $white;
+            }
+        }
+    }
+}

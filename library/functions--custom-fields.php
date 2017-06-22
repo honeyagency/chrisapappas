@@ -1,7 +1,5 @@
 <?php
 
-
-
 function prepareSiteOptions()
 {
 
@@ -53,4 +51,31 @@ function prepareBlogPostFields()
     );
     return $section;
 
+}
+
+function prepareHomePageFields()
+{
+
+    $about = array(
+        'text'   => get_field('field_594af59666a67'),
+        'button' => get_field('field_594af5ae66a69'),
+        'url'    => get_field('field_594af5a366a68'),
+    );
+    $shop = array(
+        'title'     => get_field('field_594af77fb3f25'),
+        'paragraph' => get_field('field_594af784b3f26'),
+        'button'    => get_field('field_594af790b3f27'),
+        'url'       => get_field('field_594af7a3b3f28'),
+    );
+    $email = array(
+        'title'    => get_field('field_594afe078923c'),
+        'subtitle' => get_field('field_594afe108923d'),
+        'embed'    => get_field('field_594afe178923e'),
+    );
+    $section = array(
+        'about' => $about,
+        'shop'  => $shop,
+        'email'=> $email,
+    );
+    return $section;
 }

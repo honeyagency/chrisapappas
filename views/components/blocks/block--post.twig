@@ -1,13 +1,5 @@
 <div class="block--post grid--one grid--xs-half grid--md-third margin--vert-2">
-	{# <img class="margin--bot-1" alt="{{post.title}}" width="100%" src=""> #}
-	<img class="margin--bot-1"
-		src="{{post.custom.details.grid_image|resize(800, 920)}}"
-		alt=""
-		width="100%" 
-		src-set="
-		{{post.custom.details.grid_image|resize(800, 800)}} 375w,
-		{{post.custom.details.grid_image|resize(800, 920)}} 900w"
-		sizes="100vw, 33vw">
+	<img class="margin--bot-1" alt="{{post.title}}" width="100%" src="{{post.custom.details.grid_image|resize(810, 930)}}"> 
 	<h3>{{post.title}}</h3>
 	<time class="color--gray-font text--uppercase letter--1 font--even-smaller margin--vert-half block">{{post.date|date('F d, Y')}}</time>
 </div>

@@ -27,13 +27,14 @@ $context['post'] = $post;
 
 $pinpost = getCustomPosts('post', -1, null, 'date', null, null);
 
-$pinnedPost;
-$pinPostId;
+$pinnedPost           = null;
+$pinPostId            = null;
+$context['instagram'] = $instagramCachedResults;
 
 foreach ($pinpost as $post) {
 
-	// If there is a pinned post that isn't expired, we'll add it to a context
-    
+    // If there is a pinned post that isn't expired, we'll add it to a context
+
     if ($post['custom']['details']['pinned_post'] == 'true' and $post['custom']['details']['pinned_post_expiration'] > strtotime("now")) {
         $pinnedPost = $post;
         $pinPostId  = $post['id'];
@@ -50,5 +51,9 @@ foreach ($pinpost as $post) {
 $context['pinnedPost'] = $pinnedPost;
 
 $context['posts'] = getCustomPosts('post', 10, null, 'date', $pinPostId, null);
+
+if (is_front_page()) {
+    $context['home'] = prepareHomePageFields();
+}
 
 Timber::render(array('page-' . $post->post_name . '.twig', 'page.twig'), $context);

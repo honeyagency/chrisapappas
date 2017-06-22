@@ -1,0 +1,32 @@
+.block--instagram-image {
+    overflow: hidden;
+    height: 50vw;
+    position: relative;
+
+    @include media($screen-sm) {
+        height: 20vw;
+    }
+
+
+    img {
+        &.wide {
+            height: 100%;
+            width: auto;
+        }
+
+        &.tall {
+            width: 100%;
+            height: auto;
+        }
+
+        &.square {}
+    }
+
+    a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
