@@ -61,3 +61,15 @@
     top: 50%;
     transform: translateY(-50%);
 }
+
+.hidden--mob {
+    @include media($max-sm) {
+        display: none !important;
+    }
+}
+
+.hidden--dsk {
+    @include media($screen-sm) {
+        display: none !important;
+    }
+}

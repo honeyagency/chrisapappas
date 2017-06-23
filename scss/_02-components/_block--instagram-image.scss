@@ -40,6 +40,12 @@
         bottom: 0;
     }
 
+    &:nth-of-type(6), &:nth-of-type(7), &:nth-of-type(8), &:nth-of-type(9) {
+        @include media($max-xs) {
+            display: none;
+        }
+    }
+
     &:nth-of-type(10), &:nth-of-type(11) {
         @include media($max-xs) {
             display: none;

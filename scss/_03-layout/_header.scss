@@ -92,10 +92,12 @@ body {
     &.fixed {
         main {
             top: 152px;
-position: relative;
+            position: relative;
+
             @include media($screen-sm) {
                 top: 187px;
             }
         }
     }
 }
+

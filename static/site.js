@@ -35,3 +35,12 @@ var stickyNavDebounce = debounce(function(e) {
     stickyNav(e);
 }, 10);
 window.addEventListener('scroll', stickyNavDebounce);
+
+
+jQuery(document).ready(function($) {
+    $('.menu--trigger').on('click touchstart', function(event) {
+        event.preventDefault();
+        $('body').toggleClass('openmobile');
+        $('nav').toggleClass('openmobile');
+    });
+});
