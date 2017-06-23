@@ -945,6 +945,12 @@
 		"oAP": "\/.sass-cache\/d6ae14608e62d38922342e51247e940a37a21606\/_typography.scssc",
 		"oF": 0
 		},
+	"\/.sass-cache\/d7155482e96f2347769fb25f92f07672c51bff23\/_fixed-nav.scssc": {
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "\/.sass-cache\/d7155482e96f2347769fb25f92f07672c51bff23\/_fixed-nav.scssc",
+		"oF": 0
+		},
 	"\/.sass-cache\/d7155482e96f2347769fb25f92f07672c51bff23\/_footer.scssc": {
 		"ft": 8192,
 		"oA": 1,
@@ -1297,399 +1303,11 @@
 		"oAP": "\/single.php",
 		"oF": 0
 		},
-	"\/static\/grunticon.loader.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/static\/min\/grunticon.loader-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/static\/icons\/arrow-right-gold.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/static\/icons\/arrow-right-gold.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/static\/icons\/arrow-right.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/static\/icons\/arrow-right.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/static\/icons\/final\/grunticon.loader.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/static\/icons\/final\/min\/grunticon.loader-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/static\/icons\/final\/icons.data.png.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/static\/icons\/final\/icons.data.png-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/static\/icons\/final\/icons.data.svg.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/static\/icons\/final\/icons.data.svg-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/static\/icons\/final\/icons.fallback.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/static\/icons\/final\/icons.fallback-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/static\/icons\/final\/png\/arrow-right-gold.png": {
-		"ft": 32768,
-		"iS": 659,
-		"oA": 0,
-		"oAP": "\/static\/icons\/final\/png\/arrow-right-gold.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/static\/icons\/final\/png\/arrow-right.png": {
-		"ft": 32768,
-		"iS": 2447,
-		"oA": 0,
-		"oAP": "\/static\/icons\/final\/png\/arrow-right.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/static\/icons\/final\/png\/logo--cp-black.png": {
-		"ft": 32768,
-		"iS": 5063,
-		"oA": 0,
-		"oAP": "\/static\/icons\/final\/png\/logo--cp-black.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/static\/icons\/final\/png\/logo--cp-gold-01.png": {
-		"ft": 32768,
-		"iS": 13000,
-		"oA": 0,
-		"oAP": "\/static\/icons\/final\/png\/logo--cp-gold-01.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/static\/icons\/final\/png\/logo--cp-gold.png": {
-		"ft": 32768,
-		"iS": 12463,
-		"oA": 0,
-		"oAP": "\/static\/icons\/final\/png\/logo--cp-gold.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/static\/icons\/final\/png\/logo--full-text.png": {
-		"ft": 32768,
-		"iS": 3710,
-		"oA": 0,
-		"oAP": "\/static\/icons\/final\/png\/logo--full-text.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/static\/icons\/final\/png\/social--facebook.png": {
-		"ft": 32768,
-		"iS": 1865,
-		"oA": 0,
-		"oAP": "\/static\/icons\/final\/png\/social--facebook.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/static\/icons\/final\/png\/social--instagram.png": {
-		"ft": 32768,
-		"iS": 7044,
-		"oA": 0,
-		"oAP": "\/static\/icons\/final\/png\/social--instagram.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/static\/icons\/final\/png\/social--pinterest.png": {
-		"ft": 32768,
-		"iS": 6735,
-		"oA": 0,
-		"oAP": "\/static\/icons\/final\/png\/social--pinterest.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/static\/icons\/final\/png\/social--search.png": {
-		"ft": 32768,
-		"iS": 4877,
-		"oA": 0,
-		"oAP": "\/static\/icons\/final\/png\/social--search.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/static\/icons\/final\/png\/social--twitter.png": {
-		"ft": 32768,
-		"iS": 4744,
-		"oA": 0,
-		"oAP": "\/static\/icons\/final\/png\/social--twitter.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/static\/icons\/final\/preview.html": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/static\/icons\/final\/preview.html",
+	"\/static": {
+		"ft": 65536,
+		"oA": 1,
+		"oAP": "\/build\/static",
 		"oF": 0
-		},
-	"\/static\/icons\/logo--cp-black.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/static\/icons\/logo--cp-black.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/static\/icons\/logo--cp-gold.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/static\/icons\/logo--cp-gold.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/static\/icons\/logo--full-text.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/static\/icons\/logo--full-text.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/static\/icons\/optimized\/arrow-right-gold.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/static\/icons\/optimized\/arrow-right-gold.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/static\/icons\/optimized\/arrow-right.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/static\/icons\/optimized\/arrow-right.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/static\/icons\/optimized\/logo--cp-black.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/static\/icons\/optimized\/logo--cp-black.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/static\/icons\/optimized\/logo--cp-gold-01.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/static\/icons\/optimized\/logo--cp-gold-01.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/static\/icons\/optimized\/logo--cp-gold.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/static\/icons\/optimized\/logo--cp-gold.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/static\/icons\/optimized\/logo--full-text.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/static\/icons\/optimized\/logo--full-text.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/static\/icons\/optimized\/social--facebook.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/static\/icons\/optimized\/social--facebook.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/static\/icons\/optimized\/social--instagram.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/static\/icons\/optimized\/social--instagram.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/static\/icons\/optimized\/social--pinterest.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/static\/icons\/optimized\/social--pinterest.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/static\/icons\/optimized\/social--search.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/static\/icons\/optimized\/social--search.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/static\/icons\/optimized\/social--twitter.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/static\/icons\/optimized\/social--twitter.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/static\/icons\/social--facebook.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/static\/icons\/social--facebook.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/static\/icons\/social--instagram.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/static\/icons\/social--instagram.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/static\/icons\/social--pinterest.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/static\/icons\/social--pinterest.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/static\/icons\/social--search.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/static\/icons\/social--search.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/static\/icons\/social--twitter.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/static\/icons\/social--twitter.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/static\/site.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/static\/min\/site-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
 		},
 	"\/style.css": {
 		"aP": 1,
@@ -1877,6 +1495,12 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/views\/components\/comments.twig",
+		"oF": 0
+		},
+	"\/views\/components\/fixed-nav.twig": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/views\/components\/fixed-nav.twig",
 		"oF": 0
 		},
 	"\/views\/components\/grunticon.twig": {
@@ -3951,7 +3575,7 @@
 	"languageDefaultsUserDefined": [
 		],
 	"previewPathAddition": "",
-	"skippedFoldersString": "log, _logs, logs, _cache, cache, \/storage\/framework\/sessions, node_modules, \/scss, \/app",
+	"skippedFoldersString": "log, _logs, logs, _cache, cache, \/storage\/framework\/sessions, node_modules, \/scss, \/app, \/static",
 	"sourceFolderName": "source",
 	"uglifyDefinesString": "",
 	"uglifyFlags2": {

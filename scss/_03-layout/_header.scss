@@ -1,0 +1,101 @@
+@keyframes header {
+    0% {
+        top: -85px;
+    }
+
+    100% {
+        top: 0;
+    }
+}
+
+header {
+    z-index: 99;
+
+    nav {
+        .gold {
+            opacity: 0;
+            height: 0;
+            display: block;
+        }
+    }
+
+    &.fixed {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        animation-name: header;
+        animation-duration: .2s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease;
+
+        br {
+            display: none;
+        }
+
+        .gold {
+            order: 1;
+        }
+
+        nav {
+            order: 2;
+        }
+
+        .section--social {
+            order: 3;
+        }
+
+        .black, .gold {
+            opacity: 0;
+            display: none;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: flex-end;
+
+            .gold {
+                order: 1;
+                display: inline-block;
+                opacity: 1;
+                height: 35px;
+
+                i {
+                    @include media($screen-sm) {
+                        height: 50px;
+                    }
+                }
+            }
+
+            ul {
+                order: 2;
+                display: inline-block;
+            }
+        }
+
+        .section--social {
+            position: relative;
+            z-index: 999;
+            display: inline-block;
+            height: 16px;
+        }
+    }
+}
+
+body {
+    &.fixed {
+        main {
+            top: 152px;
+position: relative;
+            @include media($screen-sm) {
+                top: 187px;
+            }
+        }
+    }
+}
