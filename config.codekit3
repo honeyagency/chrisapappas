@@ -7,7 +7,7 @@
 		"uuidString": "DDFF7D39-C5E9-44C7-932A-0F5C8D5B3373"
 		}
 	],
-"creatorBuild": "25813",
+"creatorBuild": "25849",
 "files": {
 	"\/.gitignore": {
 		"ft": 8192,
@@ -967,6 +967,12 @@
 		"ft": 8192,
 		"oA": 1,
 		"oAP": "\/.sass-cache\/d7155482e96f2347769fb25f92f07672c51bff23\/_header.scssc",
+		"oF": 0
+		},
+	"\/.sass-cache\/d7155482e96f2347769fb25f92f07672c51bff23\/_mobile-header.scssc": {
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "\/.sass-cache\/d7155482e96f2347769fb25f92f07672c51bff23\/_mobile-header.scssc",
 		"oF": 0
 		},
 	"\/.sass-cache\/d7155482e96f2347769fb25f92f07672c51bff23\/_navigation.scssc": {
@@ -3574,6 +3580,7 @@
 		},
 	"languageDefaultsUserDefined": [
 		],
+	"overrideExternalServerCSS": 0,
 	"previewPathAddition": "",
 	"skippedFoldersString": "log, _logs, logs, _cache, cache, \/storage\/framework\/sessions, node_modules, \/scss, \/app, \/static",
 	"sourceFolderName": "source",
