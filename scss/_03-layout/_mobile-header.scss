@@ -30,8 +30,8 @@ header {
         }
 
         .menu--trigger {
-            width: 20px;
-            height: 13px;
+            width: 16px;
+            height: 16px;
             position: relative;
             display: block;
 
@@ -43,26 +43,29 @@ header {
                 position: relative;
                 transform: translateY(-50%);
                 display: block;
+                opacity: 1;
+                transition: opacity 0.2s $base-cubic;
             }
 
             &:after, &:before {
                 display: block;
-                position: relative;
+                position: absolute;
                 width: 100%;
                 height: 1px;
                 content: ' ';
+                transform-origin: center;
+                transform: translateY(0) rotate(0);
+                transition: transform 0.2s $base-cubic;
             }
 
             &:before {
                 border-top: 1px solid;
-
-                transform-origin: top left;
+                top: 0;
             }
 
             &:after {
                 border-bottom: 1px solid;
-                margin-top: 13px;
-                transform-origin: bottom right;
+                bottom: 0;
             }
         }
 
@@ -87,22 +90,34 @@ header {
                     position: relative;
                 }
             }
+        }
 
-            &.openmobile {
+        &.openmobile {
+            .menu--trigger {
+                background-color: transparent;
+
+                &:after, &:before {
+                    transition: transform 0.2s $base-cubic;
+                }
+
+                &:before {
+                    transform: translateY(7.5px) rotate(45deg);
+                }
+
+                &:after {
+                    transform: rotate(45deg);
+                    transform: translateY(-7.5px) rotate(-45deg);
+                }
+
+                span {
+                    transition: opacity 0.2s $base-cubic;
+                    opacity: 0;
+                }
+            }
+
+            nav {
                 transition: transform 0.4s $base-cubic;
                 transform: translateY(0%);
-
-                .menu--trigger {
-                    background-color: transparent;
-
-                    &:before {
-                        transform: rotate(45deg);
-                    }
-
-                    &:after {
-                        transform: rotate(45deg);
-                    }
-                }
 
                 ul {
                     li {

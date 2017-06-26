@@ -41,6 +41,6 @@ jQuery(document).ready(function($) {
     $('.menu--trigger').on('click touchstart', function(event) {
         event.preventDefault();
         $('body').toggleClass('openmobile');
-        $('nav').toggleClass('openmobile');
+        $('header').toggleClass('openmobile');
     });
 });
