@@ -81,7 +81,7 @@ if (function_exists('acf_add_options_page')) {
 }
 
 add_theme_support( 'post-thumbnails' );
-add_image_size( 'inline-blog-images', 1892, 9999 ); // Unlimited Height Mode
+add_image_size( 'inline-blog-images', 1180, 9999 ); // Unlimited Height Mode
 
 
 function addDiamondsToQuotes($content){

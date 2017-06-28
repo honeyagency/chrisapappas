@@ -1,5 +1,5 @@
 <?php
-function getCustomPosts($posttype = '', $limit = '', $category = '', $order = 'title', $excluded = null, $tag = null)
+function getCustomPosts($posttype = '', $limit = '', $category = '', $order = 'title', $excluded = null, $tag = null, $offset = null)
 {
 
     if (is_numeric($category)) {
@@ -36,6 +36,9 @@ function getCustomPosts($posttype = '', $limit = '', $category = '', $order = 't
     // If there's an excluded post (for example, the current post) we add that here
     if ($excluded != null) {
         $args['post__not_in'] = array($excluded);
+    }
+    if ($offset != null || $offset != 0) {
+        $args['offset'] = $offset;
     }
 // print_r($args);
     $loop = new WP_Query($args);

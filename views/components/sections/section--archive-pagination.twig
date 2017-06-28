@@ -1,0 +1,15 @@
+<section class="section--archive-pagination grid--one text--center font--larger">
+	{% if pagination.prev != null %}
+		<a href="{{pagination.prev.link}}" class="{{pagination.prev.class}}"><i class="icon-arrow-right" data-grunticon-embed></i></a>
+	{% endif %}
+	{% for page in pagination.pages %}
+		{% if page.current == false %}
+			<a href="{{page.link}}" class="{{page.class}}">{{page.title}}</a>
+		{% else %}
+			<span class="{{page.class}}">{{page.title}}</span>
+		{% endif %}
+	{% endfor %}
+	{% if pagination.next != null %}
+		<a href="{{pagination.next.link}}" class="{{pagination.next.class}}"><i class="icon-arrow-right" data-grunticon-embed></i></a>
+	{% endif %}
+</section>

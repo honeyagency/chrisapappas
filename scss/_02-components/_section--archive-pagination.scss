@@ -1,0 +1,24 @@
+.section--archive-pagination {
+    a {
+        .icon-arrow-right {
+            svg {
+                width: 10px;
+            }
+        }
+    }
+
+    .prev {
+        .icon-arrow-right {
+            svg {
+                transform: rotate(-180deg);
+            }
+        }
+    }
+
+    .page-number {
+        font-size: 1.7em;
+        font-weight: 200;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}

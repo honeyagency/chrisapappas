@@ -99,3 +99,11 @@ header.fixed-nav {
         animation-timing-function: $base-cubic;
     }
 }
+
+body.single-post {
+    header.fixed-nav {
+        .icon-logo--cp-gold {
+            height: 32px;
+        }
+    }
+}

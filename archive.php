@@ -14,27 +14,46 @@
  * @since   Timber 0.2
  */
 
-$templates = array( 'archive.twig', 'index.twig' );
+$templates = array('archive.twig', 'index.twig');
 
 $context = Timber::get_context();
 
-$context['title'] = 'Archive';
-if ( is_day() ) {
-	$context['title'] = 'Archive: '.get_the_date( 'D M Y' );
-} else if ( is_month() ) {
-	$context['title'] = 'Archive: '.get_the_date( 'M Y' );
-} else if ( is_year() ) {
-	$context['title'] = 'Archive: '.get_the_date( 'Y' );
-} else if ( is_tag() ) {
-	$context['title'] = single_tag_title( '', false );
-} else if ( is_category() ) {
-	$context['title'] = single_cat_title( '', false );
-	array_unshift( $templates, 'archive-' . get_query_var( 'cat' ) . '.twig' );
-} else if ( is_post_type_archive() ) {
-	$context['title'] = post_type_archive_title( '', false );
-	array_unshift( $templates, 'archive-' . get_post_type() . '.twig' );
-}
-$context['instagram'] = $instagramCachedResults;
-$context['posts'] = Timber::get_posts();
+$categories    = get_the_category();
+$category_id   = $categories[0]->cat_ID;
+$numberOfPosts = get_option('posts_per_page');
+// if ($numberOfPosts == null) {
+//     $numberOfPosts = 10;
+// }
+$context['pagination'] = Timber::get_pagination();
 
-Timber::render( $templates, $context );
+$context['title'] = 'Archive';
+if (is_day()) {
+    $context['title'] = 'Archive: ' . get_the_date('D M Y');
+} else if (is_month()) {
+    $context['title'] = 'Archive: ' . get_the_date('M Y');
+} else if (is_year()) {
+    $context['title'] = 'Archive: ' . get_the_date('Y');
+} else if (is_tag()) {
+    $context['title'] = single_tag_title('', false);
+} else if (is_category()) {
+    $context['title'] = single_cat_title('', false);
+    array_unshift($templates, 'archive-' . get_query_var('cat') . '.twig');
+} else if (is_post_type_archive()) {
+    $context['title'] = post_type_archive_title('', false);
+    array_unshift($templates, 'archive-' . get_post_type() . '.twig');
+}
+if (is_category()) {
+    $cat = $category_id;
+} else {
+    $cat = null;
+}
+$paged                = (get_query_var('paged')) ? get_query_var('paged') : 1;
+
+$offset               = $paged * floatval($numberOfPosts) - floatval($numberOfPosts);
+
+$context['instagram'] = $instagramCachedResults;
+
+// $context['posts'] = getCustomPosts('post', $numberOfPosts, $cat, 'date', $pinPostId, null, $offset);
+
+$context['posts'] = Timber::get_posts();
+Timber::render($templates, $context);
