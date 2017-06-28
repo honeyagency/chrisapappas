@@ -65,9 +65,13 @@ function getCustomPosts($posttype = '', $limit = '', $category = '', $order = 't
     }
 }
 
-function getSinglePost($posttype = null)
+function getSinglePost($posttype = null, $id = null)
 {
-    $postId = get_the_id();
+    if ($id != null) {
+        $postId = $id;
+    } else {
+        $postId = get_the_id();
+    }
 
     $attachedimage = new TimberImage(get_post_thumbnail_id());
     $categories    = get_the_category();
@@ -78,6 +82,7 @@ function getSinglePost($posttype = null)
         'id'         => get_the_id(),
         'title'      => get_the_title(),
         'categories' => $categories,
+        'content'    => get_the_content(),
         'excerpt'    => get_the_excerpt(),
         'tags'       => get_the_tags(),
         'post_type'  => $posttype,

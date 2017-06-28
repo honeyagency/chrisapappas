@@ -24,12 +24,11 @@
 $context         = Timber::get_context();
 $post            = new TimberPost();
 $context['post'] = $post;
-
+$context['instagram'] = $instagramCachedResults;
 $pinpost = getCustomPosts('post', -1, null, 'date', null, null);
 
 $pinnedPost           = null;
 $pinPostId            = null;
-$context['instagram'] = $instagramCachedResults;
 
 foreach ($pinpost as $post) {
 

@@ -9,9 +9,15 @@ function prepareSiteOptions()
         'facebook'  => get_field('field_5949a2c93c82a', 'option'),
         'pinterest' => get_field('field_5949a2d13c82b', 'option'),
     );
+    $email = array(
+        'title'    => get_field('field_5952b2769b643', 'option'),
+        'subtitle' => get_field('field_5952b2819b644', 'option'),
+        'embed'    => get_field('field_5952b28d9b645', 'option'),
+    );
 
     $options = array(
         'social' => $social,
+        'email'  => $email,
     );
     return $options;
 }
@@ -45,9 +51,39 @@ function prepareBlogPostFields()
             'end_time'   => get_field('field_5949b9d20a1ec'),
         );
     }
+
+    if (have_rows('field_5952e64708cef')) {
+
+        while (have_rows('field_5952e64708cef')) {
+            the_row();
+
+            if (have_rows('field_5952e66a08cf1')) {
+                $linkSection = array();
+                while (have_rows('field_5952e66a08cf1')) {
+                    the_row();
+                    $imageId = get_sub_field('field_5952e68408cf3');
+                    if (!empty($imageId)) {
+                        $image = new TimberImage($imageId);
+                    } else {
+                        $image = null;
+                    }
+                    $linkSection[] = array(
+                        'description' => get_sub_field('field_5952e68d08cf4'),
+                        'link'        => get_sub_field('field_5952e67a08cf2'),
+                        'image'       => $image,
+                    );
+                }
+            }
+            $postLinkSections[] = array(
+                'title'    => get_sub_field('field_5952e65808cf0'),
+                'sections' => $linkSection,
+            );
+        }
+    }
     $section = array(
         'details' => $details,
         'event'   => $event,
+        'links'   => $postLinkSections,
     );
     return $section;
 
@@ -67,15 +103,10 @@ function prepareHomePageFields()
         'button'    => get_field('field_594af790b3f27'),
         'url'       => get_field('field_594af7a3b3f28'),
     );
-    $email = array(
-        'title'    => get_field('field_594afe078923c'),
-        'subtitle' => get_field('field_594afe108923d'),
-        'embed'    => get_field('field_594afe178923e'),
-    );
+
     $section = array(
         'about' => $about,
         'shop'  => $shop,
-        'email'=> $email,
     );
     return $section;
 }

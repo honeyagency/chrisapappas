@@ -1,5 +1,42 @@
-.section--pinned-post{
-	img{
-		width: 100%;
-	}
+.section--pinned-post {
+    align-items: stretch;
+
+    img {
+        width: 100%;
+    }
+
+    .pinned--image {
+        background-size: cover;
+        background-position: center;
+    }
+
+    .pinned--content {
+
+
+
+        @include media($screen-sm) {
+            padding-top: 3em;
+            padding-bottom: 3em;
+        }
+
+
+        @include media($max-md) {
+            padding-left: 2em;
+            padding-bottom: 2em;
+        }
+
+
+        @include media($screen-md) {
+            padding-top: 4em;
+            padding-bottom: 4em;
+        }
+
+
+        @include media($screen-lg) {
+            padding-top: 5em;
+            padding-bottom: 5em;
+        }
+
+
+    }
 }

@@ -31,7 +31,11 @@
 }
 
 .font--even-larger {
-    font-size: 1.3em;
+    font-size: 1.15em;
+
+    @include media($screen-sm) {
+        font-size: 1.3em;
+    }
 }
 
 .font--smaller {
@@ -81,6 +85,7 @@
 .line--short {
     line-height: 1.2;
 }
+
 .line--2 {
     line-height: 2;
 }

@@ -80,6 +80,17 @@ if (function_exists('acf_add_options_page')) {
     acf_add_options_page();
 }
 
+add_theme_support( 'post-thumbnails' );
+add_image_size( 'inline-blog-images', 1892, 9999 ); // Unlimited Height Mode
+
+
+function addDiamondsToQuotes($content){
+   return preg_replace('/<blockquote>\\s*?/s', '<blockquote><i class="icon-diamond" data-grunticon-embed></i>', $content);
+}
+// img unautop
+
+add_filter('the_content', 'addDiamondsToQuotes');
+
 // load a list of recent images from instagram
 require_once 'instagram.php';
 

@@ -21,31 +21,42 @@ h1, h2, h3, h4, h5, h6 {
     -moz-hyphens: none;
     -ms-hyphens: none;
     -o-hyphens: none;
-    hyphens: none;
 }
 
 // mobile
 $h1: 2.5 * $base-font-size;
 $h2: 1.6 * $base-font-size;
-$h3: 1.35 * $base-font-size;
+$h3: 1.5 * $base-font-size;
 $h4: 0.9 * $base-font-size;
 $h5: 0.875 * $base-font-size;
 $h6: 0.7 * $base-font-size;
 
 h1 {
     font-size: $h1;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     line-height: 1.1;
     margin-bottom: 0.2em;
+    font-weight: 400;
+
+    @include media($screen-sm) {
+        font-weight: 300;
+    }
 }
 
 h2 {
     font-size: $h2;
     line-height: 1;
+    letter-spacing: 1.5px;
+    font-weight: 400;
+
+    @include media($screen-sm) {
+        font-weight: 300;
+    }
 }
 
 h3 {
     font-size: $h3;
+    line-height: 1.1;
 
     // letter-spacing: 1.6px;
 }
@@ -185,7 +196,36 @@ code, pre {
 p {
     margin-bottom: 1em;
 }
-hr{
-    border:0;
+
+hr {
+    border: 0;
     border-bottom: 1px solid $gray;
+}
+
+blockquote {
+    padding-top: 1em;
+    padding-bottom: 1em;
+
+    .icon-diamond {
+        display: inline-block;
+        margin-bottom: .5em;
+
+        svg {
+            width: 16px;
+        }
+    }
+    p {
+        &:before {
+            content: '“';
+        }
+        &:after {
+            content: '”';
+        }
+    }
+
+    text-align: center;
+    font-family: $heading-font-family;
+    font-size: 1.8em;
+    line-height: 1.1;
+    letter-spacing: -0.5px;
 }
