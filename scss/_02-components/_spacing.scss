@@ -50,3 +50,9 @@
         padding-left: $mobile-spacing;
     }
 }
+.spacing--gutter-md {
+    @include media($max-md) {
+    padding-right: $mobile-spacing;
+    padding-left: $mobile-spacing;
+}
+}

@@ -4,9 +4,9 @@
 	{% endif %}
 	{% for page in pagination.pages %}
 		{% if page.current == false %}
-			<a href="{{page.link}}" class="{{page.class}}">{{page.title}}</a>
+			<a href="{{page.link}}" class="{{page.class}} color--gray-font">{{page.title}}</a>
 		{% else %}
-			<span class="{{page.class}}">{{page.title}}</span>
+			<span class="{{page.class}} color--black-text">{{page.title}}</span>
 		{% endif %}
 	{% endfor %}
 	{% if pagination.next != null %}

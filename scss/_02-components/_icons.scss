@@ -58,9 +58,22 @@
     &.color--white {
         svg {
             height: 100%;
+
             path {
                 fill: $white;
             }
+        }
+    }
+}
+
+.icon-post-toggle {
+    svg {
+        width: 30px;
+    }
+
+    &.right {
+        svg {
+            transform: rotate(180deg);
         }
     }
 }

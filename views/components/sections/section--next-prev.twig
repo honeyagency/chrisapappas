@@ -1,0 +1,19 @@
+<section class="section--next-prev flex flex--wrap justify--between content--wrap margin--center spacing--gutter-md">
+	{% if timberPost.prev %}
+	<div class="grid--half ">
+		<a href="{{timberPost.prev.permalink}}" class="prevnext">
+			<i class="icon-post-toggle left" data-grunticon-embed></i>	<span class="text--uppercase font--smaller font--bold  color--black-text">Previous Post</span>
+			<h3 class="color--black-text">{{timberPost.prev.title}}</h3>
+		</a>
+	</div>
+{% endif %}
+{% if timberPost.next %}
+	<div class="grid--half  text--right">
+		<a href="{{timberPost.next.permalink}}" class="prevnext ">
+			<span class="text--uppercase font--smaller font--bold  color--black-text">Next Post</span>
+			<i class="icon-post-toggle right" data-grunticon-embed></i>	
+			<h3 class="color--black-text">{{timberPost.next.title}}</h3>
+		</a>
+	</div>
+	{% endif %}
+</section>

@@ -1,0 +1,27 @@
+.section--next-prev {
+    .prevnext {
+        position: relative;
+    }
+
+.icon-post-toggle {
+    width: 30px;
+    display: inline-block;
+    position: absolute;
+
+    svg {
+        width: 30px;
+    }
+
+    &.left {
+        left: -45px;
+    }
+
+    &.right {
+        right: -45px;
+
+        svg {
+            transform: rotate(180deg);
+        }
+    }
+}
+}

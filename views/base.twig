@@ -12,10 +12,13 @@
 	{% endblock %}
 
 <main role="main" class="content-wrapper">
-	{% if title %}<h1 class="text--center margin--dsk-vert-2">{{title}}</h1>{% endif %}
+	{% if title %}<h1 class="text--center margin--top-1 spacing--vert-1">{{title}}</h1>{% endif %}
 		{% block content %}
 			Sorry, no content
 		{% endblock %}
+			{% if pagination %}
+			{% include 'components/sections/section--archive-pagination.twig' %}
+		{% endif %}
 	{% include 'components/sections/section--email-signup.twig' %}
 	{% include 'components/sections/section--instagram.twig' %}
 </main>

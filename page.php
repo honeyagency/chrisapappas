@@ -21,14 +21,14 @@
  * @since    Timber 0.1
  */
 
-$context         = Timber::get_context();
-$post            = new TimberPost();
-$context['post'] = $post;
+$context              = Timber::get_context();
+$post                 = new TimberPost();
+$context['post']      = $post;
 $context['instagram'] = $instagramCachedResults;
-$pinpost = getCustomPosts('post', -1, null, 'date', null, null);
+$pinpost              = getCustomPosts('post', -1, null, 'date', null, null);
 
-$pinnedPost           = null;
-$pinPostId            = null;
+$pinnedPost = null;
+$pinPostId  = null;
 
 foreach ($pinpost as $post) {
 
@@ -47,12 +47,22 @@ foreach ($pinpost as $post) {
         $pinPostId  = $pinnedPost['id'];
     }
 }
+
 $context['pinnedPost'] = $pinnedPost;
 
-$context['posts'] = getCustomPosts('post', 10, null, 'date', $pinPostId, null);
-
 if (is_front_page()) {
-    $context['home'] = prepareHomePageFields();
+    $context['home']  = prepareHomePageFields();
+    $context['posts'] = getCustomPosts('post', 10, null, 'date', $pinPostId, null);
+} else {
+    $context['pagination'] = Timber::get_pagination();
+    $numberOfPosts = get_option('posts_per_page');
+
+    $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+
+    $offset = $paged * floatval($numberOfPosts) - floatval($numberOfPosts);
+
+    $context['posts'] = Timber::get_posts();
+
 }
 
 Timber::render(array('page-' . $post->post_name . '.twig', 'page.twig'), $context);
