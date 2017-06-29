@@ -1,24 +1,68 @@
 .section--content {
-    max-width: 946px;
+    max-width: 690px;
     font-weight: 100;
     line-height: 1.7;
-    font-size: 1.175em;
+    font-size: 1.1em;
 
     img {
+        width: 100%;
         max-width: 100%;
         height: auto;
         margin: $mobile-spacing auto;
 
         @include media($screen-sm) {
             margin: 0.5em auto;
-            max-width: 590px;
+            max-width: 690px;
         }
 
 
         display: block;
     }
+
+    div {
+        width: auto !important;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: $base-sans-font;
+    }
+
+    h2, h3 {
+        font-size: 1.6em;
+        letter-spacing: 0;
+        font-weight: 500;
+        line-height: 1.2;
+        margin: 0.8em 0 0.5em 0;
+    }
+
+    h3 {
+        font-size: 1.4em;
+        color: $gray-darker;
+    }
+
+    h4, h5 {
+        letter-spacing: 0;
+        margin: 0.6em 0 0.3em 0;
+    }
+
+    .wp-caption {
+        img {
+            margin: .5em auto 0.2em auto;
+        }
+
+        p.wp-caption-text {
+            color: $gray-darker;
+            font-size: 1rem;
+
+            a {
+                // text-decoration: underline;
+                color: $gray-darker;
+                border-bottom: 1px solid;
+            }
+        }
+    }
 }
 
 .content--wrap {
-    max-width: 946px;
+    max-width: 690px;
 }

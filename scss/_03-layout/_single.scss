@@ -1,38 +1,38 @@
-div.wp-caption {
-    display: block;
-    float: left;
-    margin-right: 1em;
-    font-size: 0.7em;
-    line-height: 1.3;
-    max-width: calc(100% / 3 - 22px);
-    margin-right: 22px;
+// div.wp-caption {
+//     display: block;
+//     float: left;
+//     margin-right: 1em;
+//     font-size: 0.7em;
+//     line-height: 1.3;
+//     max-width: calc(100% / 3 - 22px);
+//     margin-right: 22px;
 
-    &:last-of-type {
-        margin-right: 0;
+//     &:last-of-type {
+//         margin-right: 0;
 
        
-    }
+//     }
 
-    @include media($screen-xs) {}
-
-
-    @include media($screen-sm) {
-        font-size: 0.7em;
-    }
+//     @include media($screen-xs) {}
 
 
-    @include media($screen-md) {}
+//     @include media($screen-sm) {
+//         font-size: 0.7em;
+//     }
 
 
-    @include media($screen-lg) {}
+//     @include media($screen-md) {}
 
 
-    @include media($screen-xl) {}
-}
-.section--content{
-	 &:after {
-            content: ' ';
-            display: block;
-            clear: both;
-        }
-}
+//     @include media($screen-lg) {}
+
+
+//     @include media($screen-xl) {}
+// }
+// .section--content{
+// 	 &:after {
+//             content: ' ';
+//             display: block;
+//             clear: both;
+//         }
+// }

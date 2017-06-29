@@ -1,11 +1,11 @@
 {% extends "base.twig" %}
 {% block content %}
 	<article class="post-type-{{post.post_type}} max-wrap margin--center margin--dsk-vert-3" id="post-{{post.id}}">
-		<img src="{{post.image|resize(1280, 598)}}" alt="{{post.title}}"
+		<img src="{{post.image|resize(1280, 685)}}" alt="{{post.title}}"
 		srcset="{{post.image|resize(640, 300)}}  320w,
-		{{post.image|resize(1500, 700)}}  750w,
-		{{post.image|resize(2160, 1010)}} 1080w,
-		{{post.image|resize(2560, 1196)}} 1280w" width="100%">
+		{{post.image|resize(1500)}}  750w,
+		{{post.image|resize(2160)}} 1080w,
+		{{post.image|resize(2560)}} 1280w" width="100%">
 		<section class="article-content spacing--gutter-mob">
 			<div class="grid--sm-half margin--center text--center margin--top-3">
 				<h1 class="article-h1">{{post.title}}</h1>
@@ -18,21 +18,25 @@
 				{{function("the_content")}}
 			</div>
 		</section>
-		{% include 'components/sections/section--next-prev.twig' %}
-{# 		<section class="max-wrap margin--center spacing--gutter">
+		<section class="content--wrap max-wrap margin--center spacing--vert-2">
 		{% for section in post.custom.links %}
-			<h4 class="font--sans">{{section.title}}</h4>
+			<h4 class="font--sans margin--bot-1">{{section.title}}</h4>
 
 			<div class="flex flex--wrap justify--between">
 				{% for link in section.sections %}
 					<div class="grid--fourth">
+						{% if link.link %}<a href="{{link.link}}">{% endif %}
 						<img src="{{link.image|resize(360,360)}}" width="180"><br>
 						<strong>{{link.description}}</strong>
+						{% if link.link %}</a>{% endif %}
 					</div>
 				{% endfor %}
 			</div>
 		{% endfor %}
-	</section> #}
+		<hr>
+	</section>
+	
+	{% include 'components/sections/section--next-prev.twig' %}
 		{# If you want comments #}
 		{# {% include 'components/comments.twig' %} #}
 	</article>
