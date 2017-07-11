@@ -48,11 +48,11 @@ function instagramResults($cache_file = null, $expires = null)
         $json_results = json_encode($api_results);
 
         // Remove cache file on error to avoid writing wrong xml
-        // if ($api_results && $json_results) {
-        //     file_put_contents($cache_file, $json_results);
-        // } else {
-        //     unlink($cache_file);
-        // }
+        if ($api_results && $json_results) {
+            file_put_contents($cache_file, $json_results);
+        } else {
+            unlink($cache_file);
+        }
 
     } else {
         // Check for the number of purge cache requests to avoid abuse

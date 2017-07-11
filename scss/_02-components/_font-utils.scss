@@ -91,7 +91,11 @@
 }
 
 .font--sans {
-    font-family: $default-font;
+    font-family: $default-font !important;
+}
+
+.font--serif {
+    font-family: $heading-font-family !important;
 }
 
 .transform--no {
