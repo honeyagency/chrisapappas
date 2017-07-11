@@ -42,7 +42,6 @@ class StarterSite extends TimberSite
         $context['site']    = $this;
         $context['assets']  = get_template_directory_uri() . '/app';
         $context['options'] = prepareSiteOptions();
-        
         return $context;
     }
 
@@ -63,4 +62,3 @@ require_once 'library/admin.php';
 
 require_once 'library/buscemi.php';
 // lots of extra theme stuff
-

@@ -9,10 +9,27 @@
  * @since   Timber 0.1
  */
 
-$templates = array( 'search.twig', 'archive.twig', 'index.twig' );
-$context = Timber::get_context();
+$templates = array('search.twig', 'archive.twig', 'index.twig');
+$context   = Timber::get_context();
 
-$context['title'] = 'Search results for '. get_search_query();
+function is_search_has_results()
+{
+    if (is_search()) {
+        global $wp_query;
+        $result = (0 != $wp_query->found_posts) ? true : false;
+        return $result;
+    }
+}
+$results            = is_search_has_results();
+$context['results'] = $results;
+
+if ($results == true) {
+	$context['title'] = 'Search results for <span class="query">' . get_search_query() . '</span>';
+}else{
+	$context['title'] = 'It looks like there are no results for <span class="query">' . get_search_query() . '</span>';
+}
+
+
 $context['posts'] = Timber::get_posts();
 
-Timber::render( $templates, $context );
+Timber::render($templates, $context);

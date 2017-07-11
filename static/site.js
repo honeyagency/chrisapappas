@@ -35,12 +35,27 @@ var stickyNavDebounce = debounce(function(e) {
     stickyNav(e);
 }, 10);
 window.addEventListener('scroll', stickyNavDebounce);
-
-
-jQuery(document).ready(function($) {
-    $('.menu--trigger').on('click touchstart', function(event) {
+jQuery(document).ready(function(e) {
+    $('.menu--trigger').on('click touchstart', function(e) {
         event.preventDefault();
         $('body').toggleClass('openmobile');
         $('header').toggleClass('openmobile');
     });
+
+    function openSearch(event) {
+        event.preventDefault();
+        $socialWrap = $('.section--social');
+        $search = $('#s');
+        if ($socialWrap.hasClass('searching')) {
+            $search.blur();
+          
+        } else {
+            $search.focus();
+        }
+        $socialWrap.toggleClass('searching');
+    }
+    $('.icon-social--search').on('click touchstart', function(e) {
+        openSearch(event);
+    });
+    
 });

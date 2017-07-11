@@ -60,7 +60,7 @@ function buscemi_scripts()
         wp_register_script('livereload', $reloadScript, null, false, true);
         wp_enqueue_script('livereload');
     }
-  wp_register_script('picturefill', get_template_directory_uri() . '/app/vendors/picturefill.min.js', null, false, true);
+    wp_register_script('picturefill', get_template_directory_uri() . '/app/vendors/picturefill.min.js', null, false, true);
     wp_enqueue_script('picturefill');
     wp_enqueue_style('buscemi_style', get_template_directory_uri() . '/app/main.min.css', null, null, null);
     wp_enqueue_script('buscemi_script', get_template_directory_uri() . '/app/app.min.js', array('jquery'), null, null, true);
@@ -80,16 +80,22 @@ if (function_exists('acf_add_options_page')) {
     acf_add_options_page();
 }
 
-add_theme_support( 'post-thumbnails' );
-add_image_size( 'medium_large', 1380, 9999 ); // Unlimited Height Mode
-update_option( 'medium_large_size_w', 1380 );
-update_option( 'medium_large_size_h', 9999 );
+add_theme_support('post-thumbnails');
+add_image_size('medium_large', 1380, 9999); // Unlimited Height Mode
+update_option('medium_large_size_w', 1380);
+update_option('medium_large_size_h', 9999);
 
-
-
-function addDiamondsToQuotes($content){
-   return preg_replace('/<blockquote>\\s*?/s', '<blockquote><i class="icon-diamond" data-grunticon-embed></i>', $content);
+function addDiamondsToQuotes($content)
+{
+    return preg_replace('/<blockquote>\\s*?/s', '<blockquote><i class="icon-diamond" data-grunticon-embed></i>', $content);
 }
+
+function my_search_form($html)
+{
+    return str_replace('To search type and hit enter', 'Search site for ', $html);
+}
+add_filter('get_search_form', 'my_search_form');
+
 // img unautop
 
 add_filter('the_content', 'addDiamondsToQuotes');
@@ -99,3 +105,5 @@ require_once 'instagram.php';
 
 require_once 'functions--custom-fields.php';
 require_once 'functions--custom-posts.php';
+
+

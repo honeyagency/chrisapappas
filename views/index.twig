@@ -6,4 +6,7 @@
 		{% endfor %}
 
 	</section>
+			{% if results == false %}
+			{% include 'components/sections/section--no-search-results.twig' %}
+		{% endif %}
 {% endblock %}
