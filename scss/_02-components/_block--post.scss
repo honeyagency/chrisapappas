@@ -7,29 +7,29 @@
             display: block;
         }
 
-        &:before {
-            content: ' ';
-            background-color: $pink;
-            top: 0;
-            bottom: 0;
-            right: 0;
-            left: 0;
-            width: 100%;
-            position: absolute;
-            height: calc(100% - 16px);
-            display: block;
-            opacity: 0;
-            transition: opacity 0.2s $base-cubic, transform 0.2s $base-cubic;
-            transform: translateY(0) translateX(0);
-            mix-blend-mode: multiply;
-        }
+        // &:before {
+        //     content: ' ';
+        //     background-color: $pink;
+        //     top: 0;
+        //     bottom: 0;
+        //     right: 0;
+        //     left: 0;
+        //     width: 100%;
+        //     position: absolute;
+        //     height: calc(100% - 16px);
+        //     display: block;
+        //     opacity: 0;
+        //     transition: opacity 0.2s $base-cubic, transform 0.2s $base-cubic;
+        //     transform: translateY(0) translateX(0);
+        //     mix-blend-mode: multiply;
+        // }
 
         &:hover, &:active {
-            &:before {
-                opacity: .8;
-                transition: opacity 0.2s $base-cubic, transform 0.2s $base-cubic;
-                transform: translateY(16px) translateX(-16px);
-            }
+            // &:before {
+            //     opacity: .8;
+            //     transition: opacity 0.2s $base-cubic, transform 0.2s $base-cubic;
+            //     transform: translateY(16px) translateX(-16px);
+            // }
         }
     }
 
