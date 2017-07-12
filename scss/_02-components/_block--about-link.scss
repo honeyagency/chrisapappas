@@ -1,4 +1,9 @@
 .block--about-link {
+    // @include media($max-lg) {
+        height: 350px;
+    // }
+
+
     i {
         width: 150px;
         display: block;
