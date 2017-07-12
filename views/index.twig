@@ -1,6 +1,7 @@
 {% extends "base.twig" %}
 {% block content %}
 	<section class="section--latest-posts max-wrap margin--center spacing--gutter content-box flex flex--wrap justify--between align--baseline ">
+			{% if title %}<h1 class="grid--one text--center margin--top-1 spacing--vert-1">{{title}}</h1>{% else %}<h1 class="article-h1 font--serif text--center">{{post.title}}</h1>{% endif %}
 		{% for post in posts %}
 			{% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
 		{% endfor %}

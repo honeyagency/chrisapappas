@@ -41,21 +41,19 @@ jQuery(document).ready(function(e) {
         $('body').toggleClass('openmobile');
         $('header').toggleClass('openmobile');
     });
-
-    function openSearch(event) {
-        event.preventDefault();
-        $socialWrap = $('.section--social');
-        $search = $('#s');
+    $('.icon-social--search').on('click touchstart', function(e) {
+        if ($(this).hasClass('fixed')) {
+            console.log('fixed');
+            $socialWrap = $('.section--social.notfixed');
+        } else {
+            $socialWrap = $(this).parent('.section--social');
+        }
+        $search = $socialWrap.children('form').children('div').children('#s');
         if ($socialWrap.hasClass('searching')) {
             $search.blur();
-          
         } else {
             $search.focus();
         }
         $socialWrap.toggleClass('searching');
-    }
-    $('.icon-social--search').on('click touchstart', function(e) {
-        openSearch(event);
     });
-    
 });

@@ -12,7 +12,7 @@ nav {
             display: inline-block;
             border-right: 1px solid $gray;
 
-            &:last-of-type {
+            &:nth-last-of-type(-n+2) {
                 border: 0;
             }
         }

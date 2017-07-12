@@ -47,6 +47,8 @@ header.fixed-nav {
     transform: translateY(-87px);
 
     nav {
+        position: relative;
+        z-index: 99;
         padding: 0;
         display: flex;
         flex-wrap: wrap;
