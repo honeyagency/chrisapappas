@@ -44,7 +44,7 @@ function instagramResults($cache_file = null, $expires = null)
 
         // File is too old, refresh cache
 
-        $api_results  = instagram_api_request(27486739, '27486739.133f8ed.85d938910c7541c7a3e1d47817f4036d');
+        $api_results  = instagram_api_request(1546007036, '1546007036.1677ed0.08755b3609e844fbbe87f7ee6498185b');
         $json_results = json_encode($api_results);
 
         // Remove cache file on error to avoid writing wrong xml
