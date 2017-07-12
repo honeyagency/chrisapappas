@@ -4,6 +4,10 @@
     line-height: 1.7;
     font-size: 1.1em;
 
+    p {
+        margin-bottom: 1.8em;
+    }
+
     img {
         width: 100%;
         max-width: 100%;
@@ -28,7 +32,7 @@
     }
 
     h2, h3 {
-        font-size: 1.6em;
+        font-size: 1.3em;
         letter-spacing: 0;
         font-weight: 500;
         line-height: 1.2;
@@ -36,7 +40,6 @@
     }
 
     h3 {
-        font-size: 1.4em;
         color: $gray-darker;
     }
 
@@ -45,6 +48,27 @@
         margin: 0.6em 0 0.3em 0;
     }
 
+    @include media($screen-sm) {
+        h2, h3 {
+            font-size: 1.6em;
+            letter-spacing: 0;
+            font-weight: 500;
+            line-height: 1.2;
+            margin: 0.8em 0 0.5em 0;
+        }
+
+        h3 {
+            font-size: 1.4em;
+            color: $gray-darker;
+        }
+
+        h4, h5 {
+            letter-spacing: 0;
+            margin: 0.6em 0 0.3em 0;
+        }
+    }
+
+
     .wp-caption {
         img {
             margin: .5em auto 0.2em auto;
@@ -52,7 +76,9 @@
 
         p.wp-caption-text {
             color: $gray-darker;
-            font-size: 1rem;
+            font-size: 0.9rem;
+            line-height: 1.4;
+            padding-bottom: 1.5em;
 
             a {
                 // text-decoration: underline;

@@ -14,10 +14,13 @@ function prepareSiteOptions()
         'subtitle' => get_field('field_5952b2819b644', 'option'),
         'embed'    => get_field('field_5952b28d9b645', 'option'),
     );
-
+    $text = array(
+        'search' => get_field('field_59666d579c8d4', 'option'),
+    );
     $options = array(
         'social' => $social,
         'email'  => $email,
+        'text'   => $text,
     );
     return $options;
 }
@@ -41,16 +44,6 @@ function prepareBlogPostFields()
         'pinned_post'            => get_field('field_59499fc15468d'),
         'pinned_post_expiration' => get_field('field_59499fd15468e'),
     );
-    $event = get_field('field_5949b93c14a89');
-
-    if ($event != null) {
-        $event = array(
-            'start_date' => get_field('field_5949b94f2b5f2'),
-            'start_time' => get_field('field_5949b9c00a1eb'),
-            'end_date'   => get_field('field_5949b99a2b5f4'),
-            'end_time'   => get_field('field_5949b9d20a1ec'),
-        );
-    }
 
     if (have_rows('field_5952e64708cef')) {
 
@@ -82,7 +75,6 @@ function prepareBlogPostFields()
     }
     $section = array(
         'details' => $details,
-        'event'   => $event,
         'links'   => $postLinkSections,
     );
     return $section;

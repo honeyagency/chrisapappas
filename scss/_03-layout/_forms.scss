@@ -120,3 +120,20 @@ select {
 .screenreaderonly {
     @include hide-visually;
 }
+
+.wpcf7-submit {
+    background: transparent;
+    appearance: none;
+    padding: 0;
+    @extend .font--semi-bold;
+
+    @extend .color--black;
+
+    @extend .text--uppercase;
+
+    @extend .letter--1;
+
+    @extend .font--smaller;
+
+    @extend .button--inline-pink-hover;
+}

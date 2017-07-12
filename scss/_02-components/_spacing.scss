@@ -35,8 +35,9 @@
 }
 
 .spacing--gutter {
-    padding-right: $mobile-spacing;
-    padding-left: $mobile-spacing;
+    padding-right: 24px;
+    padding-left: 24px;
+
 
     @include media($screen-md) {
         padding-left: 4.5em;
@@ -46,8 +47,8 @@
 
 .spacing--gutter-mob {
     @include media($max-sm) {
-        padding-right: $mobile-spacing;
-        padding-left: $mobile-spacing;
+        padding-right: 24px;
+        padding-left: 24px;
     }
 }
 .spacing--gutter-md {

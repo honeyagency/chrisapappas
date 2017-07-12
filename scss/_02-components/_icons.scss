@@ -70,3 +70,8 @@
         }
     }
 }
+.text--logo {
+        @include media($screen-sm) {
+            padding: 1.2em 0;
+        }
+    }

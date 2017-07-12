@@ -11,7 +11,12 @@
     }
 
     .pinned--content {
-
+        @include media($screen-sm) {
+            h2 {
+                margin-bottom: 0.4em;
+                line-height: 1.2;
+            }
+        }
 
 
         @include media($screen-sm) {
@@ -36,7 +41,5 @@
             padding-top: 5em;
             padding-bottom: 5em;
         }
-
-
     }
 }

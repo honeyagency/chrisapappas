@@ -1,14 +1,11 @@
 <section class="section--pinned-post bg--black flex flex--wrap justify--center align--items-center max-wrap margin--center margin--vert-2 hidden--mob">
 	<div class="pinned--content grid--one grid--sm-half nog spacing--gutter">
 		<h2 class="color--white text--uppercase">{{pinnedPost.title}}</h2>
-		{% if pinnedPost.custom.event != null %}
-			<time class="color--white text--uppercase letter--1 font--even-smaller margin--vert-half block">{{pinnedPost.custom.event.start_date|date('F d, Y')}}  |  Event</time>
-		{% endif %}
+		
 		<p class="color--white font--even-larger font--light">{{pinnedPost.excerpt}}</p>
 		<a href="{{pinnedPost.link}}" class="font--semi-bold color--gold text--uppercase letter--1 font--smaller button--inline-pink-hover">Read More</a>
 	</div>
 	<div class="pinned--image grid--one grid--sm-half nog" style="background-image:url('{{pinnedPost.custom.details.pinned_post_image|resize(1260, 860)}}');">
-
 	</div>
 </section>
 <section class="section--pinned-post bg--black max-wrap margin--center hidden--dsk">
@@ -17,9 +14,7 @@
 	</div>
 	<div class="grid--one grid--sm-half nog spacing--gutter spacing--vert-2 ">
 		<h2 class="color--white text--uppercase">{{pinnedPost.title}}</h2>
-		{% if pinnedPost.custom.event != null %}
-			<time class="color--white text--uppercase letter--1 font--even-smaller margin--vert-half block">{{pinnedPost.custom.event.start_date|date('F d, Y')}}  |  Event</time>
-		{% endif %}
+		
 		<p class="color--white font--even-larger font--light">{{pinnedPost.excerpt}}</p>
 		<a href="{{pinnedPost.link}}" class="font--semi-bold color--gold text--uppercase letter--1 font--smaller button--inline-pink-hover">Read More</a>
 	</div>

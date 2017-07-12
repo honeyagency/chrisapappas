@@ -34,35 +34,44 @@ foreach ($pinpost as $post) {
 
     // If there is a pinned post that isn't expired, we'll add it to a context
 
-    if ($post['custom']['details']['pinned_post'] == 'true' and $post['custom']['details']['pinned_post_expiration'] > strtotime("now")) {
-        $pinnedPost = $post;
-        $pinPostId  = $post['id'];
-        break;
+    if ($post['custom']['details']['pinned_post'] == 'true') {
+        if ($post['custom']['details']['pinned_post_expiration'] == null) {
+            $pinnedPost = $post;
+            $pinPostId  = $post['id'];
+            break;
+        } elseif ($post['custom']['details']['pinned_post_expiration'] > strtotime("now")) {
+            $pinnedPost = $post;
+            $pinPostId  = $post['id'];
+            break;
+        }
+
     }
 
-    // if there's nothing, we'll make the most recent post take its place (even if the most recent post is 'pinned' an has an expired pin date)
 
-    if ($pinnedPost == null) {
-        $pinnedPost = $pinpost['0'];
-        $pinPostId  = $pinnedPost['id'];
+
+// if there's nothing, we'll make the most recent post take its place (even if the most recent post is 'pinned' an has an expired pin date)
+
+if ($pinnedPost == null) {
+    $pinnedPost = $pinpost['0'];
+    $pinPostId  = $pinnedPost['id'];
+}
+}
+
+    $context['pinnedPost'] = $pinnedPost;
+
+    if (is_front_page()) {
+        $context['home']  = prepareHomePageFields();
+        $context['posts'] = getCustomPosts('post', 10, null, 'date', $pinPostId, null);
+    } else {
+        $context['pagination'] = Timber::get_pagination();
+        $numberOfPosts         = get_option('posts_per_page');
+
+        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+
+        $offset = $paged * floatval($numberOfPosts) - floatval($numberOfPosts);
+
+        $context['posts'] = Timber::get_posts();
+
     }
-}
 
-$context['pinnedPost'] = $pinnedPost;
-
-if (is_front_page()) {
-    $context['home']  = prepareHomePageFields();
-    $context['posts'] = getCustomPosts('post', 10, null, 'date', $pinPostId, null);
-} else {
-    $context['pagination'] = Timber::get_pagination();
-    $numberOfPosts = get_option('posts_per_page');
-
-    $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-
-    $offset = $paged * floatval($numberOfPosts) - floatval($numberOfPosts);
-
-    $context['posts'] = Timber::get_posts();
-
-}
-
-Timber::render(array('page-' . $post->post_name . '.twig', 'page.twig'), $context);
+    Timber::render(array('page-' . $post->post_name . '.twig', 'page.twig'), $context);
