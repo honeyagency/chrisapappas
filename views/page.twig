@@ -1,9 +1,18 @@
 {% extends "base.twig" %}
 {% block content %}
 	<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
+		
 		<section class="article-content max-wrap margin--center spacing--gutter">
+			{% if title %}<h1 class="grid--one text--center margin--top-1 spacing--vert-1">{{title}}</h1>{% else %}<h1 class="article-h1 font--serif grid--one text--center margin--top-1 spacing--vert-1">{{post.title}}</h1>{% endif %}
+			{% if post.thumbnail %}
+				<img src="{{post.thumbnail|resize(1280, 685)}}" alt="{{post.title}}"
+				srcset="{{post.thumbnail|resize(640, 300)}}  320w,
+				{{post.thumbnail|resize(1500)}}  750w,
+				{{post.thumbnail|resize(2160)}} 1080w,
+				{{post.thumbnail|resize(2560)}} 1280w" width="100%">
+			{% endif %}
 			<div class="section--content margin--center spacing--vert-3">
-				{% if title %}<h1 class="text--center margin--top-1 spacing--vert-1">{{title}}</h1>{% else %}<h1 class="article-h1 font--serif text--center">{{post.title}}</h1>{% endif %}
+				
 				{{post.content}}
 			</div>
 		</section>
