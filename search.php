@@ -16,7 +16,10 @@ function is_search_has_results()
 {
     if (is_search()) {
         global $wp_query;
-        $result = (0 != $wp_query->found_posts) ? true : false;
+        $numberOfResults = $wp_query->found_posts;
+        if ($numberOfResults < 1) {
+            $result = 'none';
+        }
         return $result;
     }
 }
@@ -24,11 +27,10 @@ $results            = is_search_has_results();
 $context['results'] = $results;
 
 if ($results == true) {
-	$context['title'] = 'Search results for <span class="query">' . get_search_query() . '</span>';
-}else{
-	$context['title'] = 'It looks like there are no results for <span class="query">' . get_search_query() . '</span>';
+    $context['title'] = 'Search results for <span class="query">' . get_search_query() . '</span>';
+} else {
+    $context['title'] = 'It looks like there are no results for <span class="query">' . get_search_query() . '</span>';
 }
-
 
 $context['posts'] = Timber::get_posts();
 
