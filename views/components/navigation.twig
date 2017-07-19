@@ -1,9 +1,7 @@
 <nav role="navigation" class="text--center spacing--vert-1 spacing--gutter-mob">
 <a href="{{site.url}}" class="logo"><i class="icon-logo--cp-gold" data-grunticon-embed></i></a>
 	<ul>
-
 		{% for item in menu.get_items %}
-			{{item|print_r}}
 			<li class="nav-item {{item.classes | join(' ')}} spacing--horiz-2">
 				<a class="nav-link color--black text--uppercase letter--1 hover--pink-bg five" {% if item.target %}target="{{item.target}}"{% endif %} href="{{item.get_link}}">{{item.title}}</a>
 				{% if item.get_children %}
