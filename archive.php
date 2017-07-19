@@ -18,7 +18,6 @@ $templates = array('archive.twig', 'index.twig');
 
 $context = Timber::get_context();
 
-$categories    = get_the_category();
 $category_id   = $categories[0]->cat_ID;
 $numberOfPosts = get_option('posts_per_page');
 // if ($numberOfPosts == null) {
@@ -43,13 +42,20 @@ if (is_day()) {
     array_unshift($templates, 'archive-' . get_post_type() . '.twig');
 }
 if (is_category()) {
-    $cat = $category_id;
+    $cat      = $category_id;
+    $category = array(
+        'description' => category_description($category_id),
+        'id'          => $category_id,
+        'title'       => single_cat_title('', false),
+
+    );
+    $context['category'] = $category;
 } else {
     $cat = null;
 }
-$paged                = (get_query_var('paged')) ? get_query_var('paged') : 1;
+$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
-$offset               = $paged * floatval($numberOfPosts) - floatval($numberOfPosts);
+$offset = $paged * floatval($numberOfPosts) - floatval($numberOfPosts);
 
 $context['instagram'] = $instagramCachedResults;
 
