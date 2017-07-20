@@ -98,20 +98,11 @@ add_filter('the_content', 'addDiamondsToQuotes');
 require_once 'instagram.php';
 
 
-function my_search_form($html)
+function new_excerpt_more($more)
 {
-    return str_replace('To search type and hit enter', 'Search site for ', $html);
-}
-add_filter('get_search_form', 'my_search_form');
-
-
-function new_excerpt_more($more) {
     return '&hellip;';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
 
 require_once 'functions--custom-fields.php';
 require_once 'functions--custom-posts.php';
-
-
-

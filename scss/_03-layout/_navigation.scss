@@ -12,8 +12,10 @@ nav {
             display: inline-block;
             border-right: 1px solid $gray;
 
-            &:nth-last-of-type(-n+2) {
-                border: 0;
+            @include media($screen-sm) {
+                &:nth-last-of-type(-n+2) {
+                    border: 0;
+                }
             }
         }
     }

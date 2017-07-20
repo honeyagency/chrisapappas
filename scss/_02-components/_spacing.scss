@@ -33,22 +33,40 @@
 .spacing--bot-6 {
     padding-bottom: 6em;
 }
+.spacing--nav{
 
+    @include media($max-sm){
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+}
 .spacing--gutter {
-    padding-right: 24px;
-    padding-left: 24px;
+    padding-right: 48px;
+    padding-left: 48px;
+
+    @include media($screen-xs) {
+        padding-right: 50px;
+        padding-left: 50px;
+    }
+
+
+    @include media($screen-sm) {
+        padding-right: 60px;
+        padding-left: 60px;
+    }
 
 
     @include media($screen-md) {
-        padding-left: 4.5em;
-        padding-right: 4.5em;
+        padding-left: 7.5em;
+        padding-right: 7.5em;
     }
 }
 
 .spacing--gutter-mob {
     @include media($max-sm) {
-        padding-right: 24px;
-        padding-left: 24px;
+        padding-right: 60px;
+        padding-left: 60px;
     }
 }
 .spacing--gutter-md {

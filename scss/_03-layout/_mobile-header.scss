@@ -143,6 +143,10 @@ header {
                         transition: transform 0.3s $base-cubic;
                         z-index: 10;
                     }
+
+                    &:last-of-type {
+                        border: 0;
+                    }
                 }
             }
         }
@@ -154,9 +158,12 @@ header {
                 padding: 0px 5px 15px 5px;
                 text-align: center;
                 font-size: 1em;
-                 &::-webkit-input-placeholder {
+                text-transform: uppercase;
+                color: $pink;
+
+                &::-webkit-input-placeholder {
                     content: 'shoe';
-                 }
+                }
             }
         }
 
