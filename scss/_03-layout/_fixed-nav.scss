@@ -36,6 +36,7 @@ header.fixed-nav {
 
     // padding-bottom: .8em 0;
     z-index: 99;
+
     // display: flex;
     // flex-wrap: wrap;
     // align-items: center;
@@ -56,10 +57,11 @@ header.fixed-nav {
         justify-content: flex-start;
 
         .logo {
+            height: 40px;
             display: inline-block;
 
             .icon-logo--cp-gold {
-                height: 55px;
+                height: 40px;
                 display: inline-block;
 
                 svg {
@@ -69,6 +71,8 @@ header.fixed-nav {
         }
 
         ul {
+            font-size: 0.85em;
+            margin-left: 1em;
             display: inline-block;
         }
     }
