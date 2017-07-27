@@ -36,6 +36,11 @@ var stickyNavDebounce = debounce(function(e) {
 }, 10);
 window.addEventListener('scroll', stickyNavDebounce);
 jQuery(document).ready(function(e) {
+    $sb = $('#searchform > div > input#s');
+    $sb.attr('placeholder', 'SEARCH');
+    $sb.on('focus', function(event) {
+        $(this).attr('placeholder', '');
+    });
     $('.menu--trigger').on('click touchstart', function(e) {
         event.preventDefault();
         $('body').toggleClass('openmobile');
