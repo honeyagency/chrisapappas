@@ -21,6 +21,15 @@
 }
 
 header.fixed-nav {
+    padding-right: 48px;
+    padding-left: 48px;
+
+    @include media($screen-lg) {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+
     &:after {
         content: ' ';
         display: block;
@@ -74,6 +83,37 @@ header.fixed-nav {
             font-size: 0.85em;
             margin-left: 1em;
             display: inline-block;
+        }
+    }
+
+    @media only screen and (min-width: $screen-sm) and (max-width: 1045px) {
+        nav {
+            ul {
+                margin-left: 1.5em;
+
+                li {
+                    border: 0 !important;
+                    padding-left: 1em !important;
+                    padding-right: 1em !important;
+                }
+            }
+        }
+
+        .section--social {
+            &.fixed {
+                a {
+                    display: none !important;
+                }
+
+                i {
+                    margin: 0;
+                }
+
+                svg {
+                    height: 12px;
+                    width: 12px;
+                }
+            }
         }
     }
 

@@ -16,6 +16,14 @@
         }
     }
 
+    a {
+        &:last-of-type {
+            i {
+                margin-right: 0;
+            }
+        }
+    }
+
     .searchform {
         width: 0%;
         transition: width 0.2s $base-cubic;
@@ -43,9 +51,7 @@
                 border: 1px solid $black;
                 transition: border 0.2s $base-cubic;
 
-                &:focus {
-
-                }
+                &:focus {}
             }
         }
     }
