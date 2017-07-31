@@ -46,7 +46,7 @@ jQuery(document).ready(function(e) {
         $('body').toggleClass('openmobile');
         $('header').toggleClass('openmobile');
     });
-    $('.icon-social--search').on('click touchstart', function(e) {
+    $('.icon-social--search').on('click', function(e) {
         if ($(this).hasClass('fixed')) {
             console.log('fixed');
             $socialWrap = $('.section--social.notfixed');
