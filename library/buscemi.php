@@ -9,7 +9,7 @@ function bc_dashboard_widget_function()
 }
 function bc_add_dashboard_widgets()
 {
-    wp_add_dashboard_widget('wp_dashboard_widget', 'Buscemi Docs', 'bc_dashboard_widget_function');
+    wp_add_dashboard_widget('wp_dashboard_widget', 'Training Documents', 'bc_dashboard_widget_function');
 }
 add_action('wp_dashboard_setup', 'bc_add_dashboard_widgets');
 
