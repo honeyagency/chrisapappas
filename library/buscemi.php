@@ -82,8 +82,8 @@ if (function_exists('acf_add_options_page')) {
 
 add_theme_support('post-thumbnails');
 add_image_size('medium_large', 1380, 9999); // Unlimited Height Mode
-update_option('medium_large_size_w', 1380);
-update_option('medium_large_size_h', 9999);
+// update_option('medium_large_size_w', 1380);
+// update_option('medium_large_size_h', 9999);
 
 function addDiamondsToQuotes($content)
 {
