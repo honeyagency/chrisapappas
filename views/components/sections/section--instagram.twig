@@ -2,12 +2,12 @@
 	{% for image in instagram %}
 		{% if loop.index < 12 %}
 			
-			{% set ratio = (image.images.standard_resolution.width / image.images.standard_resolution.height) %}
+			{% set ratio = (image.images.low_resolution.width / image.images.low_resolution.height) %}
  			{% if ratio < 1 %}{% set class = 'tall' %}{% elseif ratio > 1 %}{% set class = 'wide' %}{% else %}{% set class = 'square' %}{% endif %}
-			
+
 			<div class="block--instagram-image grid--half grid--xs-third grid--sm-fourth grid--md-fifth nog">
 				<a title="View this image on Instagram" target="_blank" href="{{image.link}}">
-					<img alt="{{image.caption.text}}" src="{{image.images.standard_resolution.url}}" class="{{class}}" width="100%">
+					<img alt="{{image.caption.text}}" src="{{image.images.low_resolution.url}}" class="{{class}}" width="100%">
 				</a>
 			</div>
 			{% if loop.first %}

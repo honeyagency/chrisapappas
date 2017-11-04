@@ -2,7 +2,7 @@
 	
 	{% if post.custom.details.grid_image or post.thumbnail.src %}
 		<a class="block--post-image-link" href="{{post.link}}">
-		<img class="margin--bot-1" alt="{{post.post_title}}" width="100%" src="{% if post.custom.details.grid_image %}{{post.custom.details.grid_image|resize(810, 930)}}{% else %}{{post.thumbnail.src|resize(810, 930)}}{% endif %}"> </a>{% endif %}
+		<img class="margin--bot-1" alt="{{post.post_title}}" width="100%" src="{% if post.custom.details.grid_image %}{{post.custom.details.grid_image|resize(756, 868)}}{% else %}{{post.thumbnail.src|resize(756, 868)}}{% endif %}"> </a>{% endif %}
 	<a href="{{post.link}}">
 	<h3 class="color--black-text">{{post.title}}</h3>
 	<time class="color--gray-font text--uppercase letter--1 font--even-smaller margin--vert-half block">{{post.date|date('F d, Y')}}</time>

@@ -40,26 +40,13 @@ function jquery_enqueue()
     wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.slim.min.js", false, null);
 }
 
-function localInstall()
-{
-    if ('127.0.0.1' == $_SERVER["REMOTE_ADDR"]) {
-        $res = false;
-    } else {
 
-        $res = true;
-    }
-    return ($res);
-}
 
 // Enqueuing all of our scripts and styles
 function buscemi_scripts()
 {
     wp_enqueue_script('jquery');
-    if (localInstall() == true) {
-        $reloadScript = 'http://localhost:35729/livereload.js';
-        wp_register_script('livereload', $reloadScript, null, false, true);
-        wp_enqueue_script('livereload');
-    }
+   
     wp_register_script('picturefill', get_template_directory_uri() . '/app/vendors/picturefill.min.js', null, false, true);
     wp_enqueue_script('picturefill');
     wp_enqueue_style('buscemi_style', get_template_directory_uri() . '/app/main.min.css', null, null, null);

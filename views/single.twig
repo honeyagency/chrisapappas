@@ -3,9 +3,9 @@
 	<article class="post-type-{{post.post_type}} max-wrap margin--center margin--dsk-vert-3" id="post-{{post.id}}">
 		<img src="{{post.image|resize(1280, 685)}}" alt="{{post.title}}"
 		srcset="{{post.image|resize(640, 300)}}  320w,
-		{{post.image|resize(1500)}}  750w,
-		{{post.image|resize(2160)}} 1080w,
-		{{post.image|resize(2560)}} 1280w" width="100%">
+		{{post.image|resize(750)}}  750w,
+		{{post.image|resize(1080)}} 1080w,
+		{{post.image|resize(1200)}} 1280w" width="100%">
 		<section class="article-content spacing--gutter-mob">
 			<div class="grid--sm-half margin--center text--center margin--top-3">
 				<h1 class="article-h1">{{post.title}}</h1>
