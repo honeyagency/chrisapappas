@@ -37,8 +37,10 @@ function jquery_enqueue()
 {
     wp_dequeue_script('jquery');
     wp_deregister_script('jquery');
-    wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.slim.min.js", false, null);
+    wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.slim.min.js", false, false, true);
+
 }
+// wp_register_script( $handle, $src, $deps = array, $ver = false, $in_footer = false )
 
 
 
@@ -46,11 +48,10 @@ function jquery_enqueue()
 function buscemi_scripts()
 {
     wp_enqueue_script('jquery');
-   
-    wp_register_script('picturefill', get_template_directory_uri() . '/app/vendors/picturefill.min.js', null, false, true);
+    wp_register_script('picturefill', get_template_directory_uri() . '/app/vendors/picturefill.min.js', array('jquery'), false, true);
     wp_enqueue_script('picturefill');
     wp_enqueue_style('buscemi_style', get_template_directory_uri() . '/app/main.min.css', null, null, null);
-    wp_enqueue_script('buscemi_script', get_template_directory_uri() . '/app/app.min.js', array('jquery'), null, null, true);
+    wp_enqueue_script('buscemi_script', get_template_directory_uri() . '/app/app.min.js', array('jquery'), null, true);
 }
 add_action('wp_enqueue_scripts', 'buscemi_scripts');
 
