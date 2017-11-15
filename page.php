@@ -29,6 +29,12 @@ $pinpost              = getCustomPosts('post', -1, null, 'date', null, null);
 
 $pinnedPost = null;
 $pinPostId  = null;
+if (is_page( 'contact' )) {
+     if ( function_exists( 'wpcf7_enqueue_scripts' ) ) {
+        wpcf7_enqueue_scripts();
+    }
+ 
+}
 
 foreach ($pinpost as $post) {
 
