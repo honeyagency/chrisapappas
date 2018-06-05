@@ -3,20 +3,20 @@
 .hover--pink-bg {
     padding-top: 0;
     padding-bottom: 0;
-    background-position: 100%;
+    background-position: 100% 0%;
     background-repeat: no-repeat;
     display: inline;
 
     // line-height: 1.5;
-    background: linear-gradient(transparent 0, transparent 50%, $pink 50%);
+    background-image: linear-gradient(transparent 0, transparent 50%, $pink 50%);
 
     // background: linear-gradient(transparent 0, $pink 0);
-    background-size: 200%;
+    background-size: 100% 200%;
     transition: background-size 0.2s $base-cubic;
 
     &:hover, &:active {
         transition: background-size 0.2s $base-cubic;
-        background-size: 100%;
+        background-size: 100% 100%;
     }
 
     &.five {
