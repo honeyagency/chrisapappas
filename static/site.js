@@ -61,4 +61,5 @@ jQuery(document).ready(function(e) {
         }
         $socialWrap.toggleClass('searching');
     });
+    $('.mc-layout__modalContent > iframe > body').css('font-family', 'sofia-pro,sans-serif');
 });
