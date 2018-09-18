@@ -6,11 +6,7 @@
     background-position: 100% 0%;
     background-repeat: no-repeat;
     display: inline;
-
-    // line-height: 1.5;
     background-image: linear-gradient(transparent 0, transparent 50%, $pink 50%);
-
-    // background: linear-gradient(transparent 0, $pink 0);
     background-size: 100% 200%;
     transition: background-size 0.2s $base-cubic;
 

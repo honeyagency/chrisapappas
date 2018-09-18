@@ -63,3 +63,13 @@ jQuery(document).ready(function(e) {
     });
     $('.mc-layout__modalContent > iframe > body').css('font-family', 'sofia-pro,sans-serif');
 });
+$('.section--content p').each(function() {
+    var $p = $(this),
+        txt = $p.html();
+    if (txt == '&nbsp;') {
+        $p.remove();
+    }
+});
+$('.section--content p span').each(function() {
+    $(this).removeAttr('style');
+});
