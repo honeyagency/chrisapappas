@@ -8,7 +8,7 @@ function prepareSiteOptions()
         'twitter'   => get_field('field_5949a2c33c829', 'option'),
         'facebook'  => get_field('field_5949a2c93c82a', 'option'),
         'pinterest' => get_field('field_5949a2d13c82b', 'option'),
-        'youtube'   => get_field('field_5949a2d13c82b', 'option'),
+        'youtube'   => get_field('field_5bbf8ba7de8c5', 'option'),
     );
     $email = array(
         'title'    => get_field('field_5952b2769b643', 'option'),
