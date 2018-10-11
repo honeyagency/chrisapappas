@@ -95,6 +95,25 @@
             "maxlength": ""
         },
         {
+            "key": "field_5bbf8ba7de8c5",
+            "label": "Youtube",
+            "name": "youtube",
+            "type": "text",
+            "instructions": "Full Youtube URL",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5952b2679b642",
             "label": "Email Block",
             "name": "",
@@ -220,5 +239,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1499910150
+    "modified": 1539305696
 }
